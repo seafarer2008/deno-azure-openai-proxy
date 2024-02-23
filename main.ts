@@ -61,6 +61,12 @@ async function requestAzure(method: string, body: any, path: string, authKey?: s
     },
     body: JSON.stringify(body),
   };
+
+  // 记录请求发送前的日志
+  console.log(`发送请求到 Azure: ${fetchAPI}`);
+  console.log(`请求方法: ${method}`);
+  console.log(`请求体: ${JSON.stringify(body, null, 2)}`); 
+  
   return await fetch(fetchAPI, payload);
   // const response:Response = await fetch(fetchAPI, payload);
 }
