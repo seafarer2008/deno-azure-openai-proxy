@@ -61,8 +61,7 @@ async function requestAzure(method: string, body: any, path: string, authKey?: s
     },
     body: JSON.stringify(body),
   };
-  console.debug(fetchAPI)
-  console.debug(payload)
+  console.debug(body)
   return await fetch(fetchAPI, payload);
   // const response:Response = await fetch(fetchAPI, payload);
 }
