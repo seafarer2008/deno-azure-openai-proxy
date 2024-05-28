@@ -52,7 +52,7 @@ async function requestAzure(method: string, body: any, path: string, authKey?: s
  }
 
   const fetchAPI:string = `https://${resourceName}.openai.azure.com/openai/deployments/${deployName}/${path}?api-version=${apiVersion}`;
-
+  console.debug(fetchAPI)
   const payload:RequestInit = {
     method: method,
     headers: {
