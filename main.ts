@@ -14,8 +14,6 @@ const mapper:any = {
   // Other mapping rules can be added here.
 };
 
-console.log(resourceName)
-
 async function handleRequest(request:Request):Promise<Response> {
   if (request.method === 'OPTIONS') {
     return handleOPTIONS(request)
